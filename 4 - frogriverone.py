@@ -1,6 +1,4 @@
-def solution(X, A):
-    second = -1
-        
+def solution(X, A):        
     iterations = 0
     leaves = []
 
@@ -11,15 +9,11 @@ def solution(X, A):
         is_sequence = verify_sequence(no_duplicates) # verify if the numbers are a sequence or not
 
         if is_sequence == True and len(no_duplicates) == X:
-            # Had to subtract 1 second because the first second is equal to 0
-            if iterations > 1:
-                second = iterations - 1
-            else:
-                second = iterations
-        
+            return iterations
+
         iterations = iterations + 1
 
-    return second
+    return -1
 
 def verify_sequence(B):
     result = True
@@ -35,13 +29,8 @@ def verify_sequence(B):
 
     return result
 
-#solution(5, [1, 3, 1, 4, 2, 3, 5, 4])
-
-verify_sequence([1, 2, 3, 4])
-verify_sequence([0, 1, 2])
-verify_sequence([1, 3, 4])
-verify_sequence([1])
-
-#solution(1, [1])
-#solution(2, [1, 2])
-#solution(5, [1, 3, 4, 6])
+result = solution(5, [1, 3, 1, 4, 2, 3, 5, 4])
+result1 = solution(1, [1])
+result2 = solution(2, [1, 2])
+result3 = solution(5, [1, 3, 4, 6])
+done = True
