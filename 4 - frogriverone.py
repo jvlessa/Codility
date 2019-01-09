@@ -35,7 +35,13 @@ def verify_sequence(B):
 
     return result
 
-solution(5, [1, 3, 1, 4, 2, 3, 5, 4])
+#solution(5, [1, 3, 1, 4, 2, 3, 5, 4])
+
+verify_sequence([1, 2, 3, 4])
+verify_sequence([0, 1, 2])
+verify_sequence([1, 3, 4])
+verify_sequence([1])
+
 #solution(1, [1])
 #solution(2, [1, 2])
 #solution(5, [1, 3, 4, 6])
