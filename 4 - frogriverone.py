@@ -12,7 +12,10 @@ def solution(X, A):
 
         if is_sequence == True and len(no_duplicates) == X:
             # Had to subtract 1 second because the first second is equal to 0
-            second = iterations - 1
+            if iterations > 1:
+                second = iterations - 1
+            else:
+                second = iterations
         
         iterations = iterations + 1
 
@@ -30,10 +33,9 @@ def verify_sequence(B):
                     result = False
             iterations = iterations + 1
 
-    else:
-        result = False
-
     return result
 
 solution(5, [1, 3, 1, 4, 2, 3, 5, 4])
+#solution(1, [1])
+#solution(2, [1, 2])
 #solution(5, [1, 3, 4, 6])
