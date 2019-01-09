@@ -1,4 +1,7 @@
 def solution(A):
+    if len(A) <= 1:
+        return 0
+
     result = 1
     ordered = sorted(A)
 
@@ -14,4 +17,5 @@ def solution(A):
     return result
 
 #solution([4, 1, 3, 2])
-solution([4, 1, 3])
+#solution([4, 1, 3])
+solution([3])
