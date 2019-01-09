@@ -1,11 +1,11 @@
-def solution(a):
+def solution(A):
     final_value = 0
     iterations = 0
 
-    for item in a:
+    for item in A:
         if iterations > 0: # starts to run the process only after first item of array
-            first = sum_items(a[:iterations])
-            second = sum_items(a[iterations:])
+            first = sum_items(A[:iterations])
+            second = sum_items(A[iterations:])
             result = first - second
 
             # if it is a negative number, does not matter, we just need to know the difference
